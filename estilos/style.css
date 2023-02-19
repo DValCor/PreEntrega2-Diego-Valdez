@@ -5,13 +5,17 @@
 }
 
 /*BODY: GRID TEMPLATE*/
-grid-template-areas:{
-        "header header header"
-        "banner banner banner"
-        "main main main"
-        "footer footer footer"
-        ;
+.grid_container{
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "banner banner banner"
+    "main main main"
+    "footer footer footer"
+    ;
+
 }
+
 
 .header{
     grid-area: header;
@@ -148,6 +152,7 @@ grid-template-areas:{
     margin: 5px;
 }
 
+
 /*----PRODUCTOS----*/
 
 #section-product1,
@@ -179,7 +184,7 @@ grid-template-areas:{
 
 /*sección flex centrada*/
 
-.centered-flex {
+.centered-flex{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,11 +204,11 @@ grid-template-areas:{
 #section-product1 .move-img,
 #section-product2 .move-img,
 #section-product3 .move-img,
-#section-product4 .move-img {
+#section-product4 .move-img{
   transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
   #section-product1:hover .move-img,
   #section-product2:hover .move-img,
   #section-product3:hover .move-img,
@@ -230,7 +235,7 @@ grid-template-areas:{
   transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
   #section-product1:hover .move-txt,
   #section-product2:hover .move-txt,
   #section-product3:hover .move-txt,
@@ -242,26 +247,26 @@ grid-template-areas:{
 
 /*animación de imagen 5 y 6 */
 
-.product5 img {
+.product5 img{
   transition: transform 0.3s ease-in-out;
 }
 
-.product5:hover img {
+.product5:hover img{
   transform: scale(1.05);
 }
 
-.product5:not(:hover) img {
+.product5:not(:hover) img{
   transform: scale(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
   .product5:hover img{
     transform: scale(1);
     transition: none;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
   .product5,
   .product6{
     margin-top: 10px;
@@ -269,21 +274,142 @@ grid-template-areas:{
 }
 
 
-.product6 img {
+.product6 img{
   transition: transform 0.3s ease-in-out;
 }
 
-.product6:hover img {
+.product6:hover img{
   transform: scale(1.05);
 }
 
-.product6:not(:hover) img {
+.product6:not(:hover) img{
   transform: scale(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
   .product6:hover img{
     transform: scale(1);
     transition: none;
+  }
+}
+
+/*----NOSOTROS----*/
+
+/*Info general*/
+
+.info-general{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.info-general h1{
+  font-size: 36px;
+  text-align: center;
+}
+.data-txt{
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+article{
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+  font-weight:200;
+}
+
+/*Store map*/
+
+.map-container{
+  width: 100%;
+  height: auto;
+  padding: 50px 0 500px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.map-content img{
+  opacity: 0;
+}
+.map-content{
+  width: 50%;
+}
+
+/*Animación mapa*/
+
+#toggle-map:checked ~ .map-content{
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#toggle-map:checked ~ .map-content img{
+  opacity: 1;
+  box-shadow: 0px 20px 16px 0px rgb(0 0 0 / 15%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-toggle-map{
+  background-color: #21AFFA;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-toggle-map:hover{
+  background-color: #3e8e41;
+}
+
+
+.btn-toggle-map{
+    margin-top: 20px;
+  }
+
+  /*Media Querys*/
+
+ @media (max-width: 768px){
+    .info-general, .stores-map {
+      flex-direction: column;
+      text-align: center;
+    }
+    .map-container {
+      margin-top: 20px;
+      background-color: #fff;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-general, .stores-map {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+@media (max-width: 767px){
+  .stores-map {
+    flex-direction: column;  
+  }
+  .map-content img{
+    content: url('../imgs/mapa/map_mobile.jpg');
+  }
+}
+
+@media (max-width: 991px){
+  .info-general, .stores-map {
+    flex-direction: column;
+    text-align: center;
   }
 }
