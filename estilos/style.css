@@ -34,6 +34,15 @@
 }
 /*HEADER: NAV*/
 
+.rrss-icon{
+  opacity: 1; 
+  transition: opacity 0.2s ease-in-out;
+}
+.rrss-icon:hover{
+  opacity: 0.5;
+}
+
+
 @media (max-width: 768px){
     .navbar-toggler {
       border: none;
@@ -485,34 +494,172 @@ button[type="submit"]:hover{
 
 /* Media queries */
 @media only screen and (max-width: 767px){
-  section {
+  section{
     padding: 10px;
   }
 
   input,
   select,
-  textarea {
+  textarea{
     font-size: 14px;
   }
 
-  button[type="submit"] {
+  button[type="submit"]{
     font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-  section {
+  section{
     max-width: 500px;
     padding: 15px;
   }
 
   input,
   select,
-  textarea {
+  textarea{
     font-size: 16px;
   }
 
-  button[type="submit"] {
+  button[type="submit"]{
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .contact-form label{
+    display: block;
+    text-align: center;
+  }
+  .contact-form h1{
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+
+/*CONTACTO*/
+
+/*Banner comunidad*/
+
+.wrapper{
+  position: relative;
+}
+
+.slider{
+  overflow: hidden;
+}
+
+#slider ul, li{
+  list-style: none;
+}
+.slides{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  animation: slide 20s infinite;
+}
+
+.slide{
+  flex-shrink: 0;
+}
+
+.slide img{
+  width: 100%;
+}
+
+@keyframes slide{
+  0% {
+    transform: translateX(0);
+  }
+  16.66% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-110%);
+  }
+  50% {
+    transform: translateX(-110%);
+  }
+  66.66% {
+    transform: translateX(-210%);
+  }
+  83.33% {
+    transform: translateX(-210%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/*main comunidad*/
+
+.file-container{
+  margin: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.file{
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.file img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.file h2{
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.file p{
+  margin: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.file:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 5px gray;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px){
+  #slide1 img{
+    content: url('../imgs/banners Community/Banner 1_mobile.png');
+  }
+  #slide2 img{
+    content: url('../imgs/banners Community/Banner 2_mobile.png');
+  }
+  #slide3 img{
+    content: url('../imgs/banners Community/Banner 3_mobile.png');
+  }
+}
+
+@media (max-width: 767px) {
+  .file-row {
+    width: 100%;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
   }
 }
