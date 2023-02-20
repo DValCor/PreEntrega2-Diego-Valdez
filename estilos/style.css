@@ -3,7 +3,9 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Asap';
+    font-family: 'Asap Regular', sans-serif;
+    src: url('./Fonts/Asap-VariableFont_wdth,wght.ttf'),
+        url('./Fonts/Asap-Italic-VariableFont_wdth,wght.ttf');
 }
 
 /*BODY: CREACIÓN DE GRID TEMPLATE*/
