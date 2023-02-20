@@ -108,19 +108,14 @@
     background-color: #f8f9fa;
     margin: 20px 0 0 0;
     padding: 20px;
-}
-
-.product-card img{
-    width: 250px;
-}
-
-.product-card{
     transition: transform 0.2s ease-in-out;
 }
 
 .product-card img{
-  transition: transform 0.2s ease-in-out;
+    width: 250px;
+    transition: transform 0.2s ease-in-out;
 }
+
 
 .product-card:hover{
     transform: scale(1.03);
@@ -153,8 +148,9 @@
 }
 
 /*FOOTER*/
+
 .footer{
-  margin-top: 45px;
+    margin-top: 45px;
     background-color: #f8f9fa;
 }
 
@@ -179,6 +175,7 @@
 }
 
 /*SECTION-PRODUCT5: formato cards*/
+
 #section-product5{
   width: 91%;
 }
@@ -255,7 +252,7 @@
   }
 }
 
-/*animación de imagen 5 y 6 */
+/*Animación de imagen 5 y 6 */
 
 .product5 img{
   transition: transform 0.3s ease-in-out;
